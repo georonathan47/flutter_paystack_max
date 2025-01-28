@@ -113,24 +113,9 @@ class _PaymentModelWidgetState extends State<PaymentModelWidget>
 
   @override
   Widget build(BuildContext context) {
-    return BottomSheet(
-      animationController: animationController,
-      onClosing: widget.onClosing,
-
-      //
-      builder: (context) {
-        if (loadingProgress < 1) {
-          return Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
-            child: LinearProgressIndicator(value: loadingProgress),
-          );
-        }
-
-        return WebViewWidget(
-          controller: controller,
-          gestureRecognizers: {Factory(() => EagerGestureRecognizer())},
-        );
-      },
+    return WebViewWidget(
+       controller: controller,
+       gestureRecognizers: {Factory(() => EagerGestureRecognizer())},
     );
   }
 }

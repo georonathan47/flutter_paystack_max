@@ -46,7 +46,7 @@ class PaymentService {
     return await showModalBottomSheet(
       context: context,
       isScrollControlled: true,
-      showDragHandle: true,
+      showDragHandle: false,
       useSafeArea: true,
       backgroundColor: backgroundColor,
 
